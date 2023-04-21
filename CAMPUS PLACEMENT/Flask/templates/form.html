@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>College Placement Prediction</title>
+	<style>
+
+		@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		#main-container {
+			color: white;
+			width: 100%;
+			display: flex;
+			background-color: black;
+			height: 100vh;
+			font-family: 'Chivo Mono', monospace;
+		}
+
+		#box1 {
+			background-color: #111111;
+			flex: 30%;
+			position: relative;
+		}
+
+		#box1 h1 {
+			position: absolute;
+			top: 20%;
+			left: 40%;
+			transform: translate(-40%, -10%);
+			font-size: 48px;
+		}
+
+
+		#box2 {
+			flex: 60%;
+			display: flex;
+			position: relative;
+		}
+
+		#yellow-box {
+			background-color: #f1c50e;
+			flex: 30%;
+		}
+
+		#black-box {
+			background-color: #111111;
+			flex: 70%;
+		}
+
+		#form-container {
+			position: absolute;
+			z-index: 1;
+			top: 40%;
+			left: 20%;
+			transform: translate(-20%, -40%);
+			padding: 20px;
+		}
+
+		#form-container h1 {
+			text-transform: uppercase;
+			letter-spacing: 10px;
+		}
+
+		#form-container div {
+			margin: 20px 0;
+		}
+
+		#form-container input,
+		#form-container select {
+			width: 100%;
+			border: none;
+			padding: 15px 10px;
+			font-family: 'Chivo Mono', monospace;
+			font-size: 16px;
+			color: #111111;
+		}
+
+		::placeholder {
+			font-family: 'Chivo Mono', monospace;
+			font-size: 16px;
+			color: rgb(133, 133, 133);
+		}
+
+		#predict-btn {
+			border: 2px solid white;
+			padding: 15px 40px;
+			outline: none;
+			background: none;
+			color: white;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 18px;
+			letter-spacing: 5px;
+			cursor: pointer;
+			transition: all .5s ease;
+		}
+
+		#predict-btn:hover {
+			background-color: white;
+			color: black;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id="main-container">
+
+		<div id="box1">
+		</div>
+
+		<div id="box2">
+			<div id="yellow-box"></div>
+			<div id="black-box"></div>
+			<div id="form-container">
+				<h1>Prediction Form</h1>
+				<form action="/prediction" method="post">
+
+					<div>
+						<input name='Age' type="number" required placeholder="Enter your Age">
+					</div>
+
+					<div>
+						<select name='Gender' type="number" required>
+		        			<option>Male</option>
+		        			<option>Female</option>
+		        		</select>
+	        		</div>
+
+	        		<div>
+	        			<select value="1" name='Stream' type="number" required>
+			                <option>Computer Science</option>
+			                <option>Information Technology</option>
+			                <option>Electronics And Communication</option>
+			                <option>Mechanical</option>
+			                <option>Electrical</option>
+			                <option>Civil</option>
+		            	</select>
+	        		</div>
+
+	        		<div>
+	        			<input name='Internships' type="number" required placeholder="Internships">
+	        		</div>
+
+	        		<div>
+	        			<input name='CGPA' type="number" required placeholder="CGPA">
+	        		</div>
+
+	        		<div>
+	        			<input  name='HistoryOfBacklogs' type="number" required placeholder="HistoryOfBacklogs">
+	        		</div>
+
+	        		
+	        		<button id="predict-btn" type="submit">Predict</button>
+	        		
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

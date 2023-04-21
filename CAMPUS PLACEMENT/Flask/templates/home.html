@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Placement Prediction</title>
+	<style>
+
+		@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+		nav {
+			background-color: white;
+			width: 100%;
+			height: 100px;
+		}
+
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		#main-container {
+			width: 100%;
+			display: flex;
+		}
+
+		#box1 {
+			flex: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 0 100px;
+			font-family: 'Chivo Mono', monospace;
+		}
+
+		#box1 p {
+			font-size: 18px;
+			line-height: 1.6em;
+		}
+
+		#box1 h1, #box1 p {
+			margin: 20px 0;
+		}
+
+		#box1 button {
+			padding: 10px 40px;
+			font-family: 'Chivo Mono', monospace;
+			text-transform: uppercase;
+			cursor: pointer;
+			background-color: #616be8;
+			border: none;
+			outline: none;
+			color: white;
+			font-size: 22px;
+			border-radius: 50px;
+			text-align: center;
+			letter-spacing: 2px;
+		}
+
+		#box1 button:hover {
+			background-color: #259bca;
+		}
+
+		#box2 {
+			flex: 50%;
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<header>
+		<nav></nav>
+	</header>
+
+	<div id="main-container">
+	
+		<div id="box1">
+			<div>
+				<h1>College Placement Prediction</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<a href="/form">
+					<button>Predict</button>
+				</a>
+			</div>
+		</div>
+
+		<div id="box2">
+			<img src="../static/img/home-bg.jpg">
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>

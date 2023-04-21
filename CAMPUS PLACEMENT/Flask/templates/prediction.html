@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Placement Prediction</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        img {
+            width: 100%;
+        }
+        body {
+            background-color: #47c956;
+        }
+
+        #main-container {
+            height: 100vh;
+            display: flex;
+            padding: 150px 200px;
+        }
+
+        #box1 {
+            flex: 50%;
+            font-family: 'Chivo Mono', monospace;
+            background-color: white;
+            margin-right: 100px;
+            padding: 20px 50px;
+            border-radius: 10px;
+        }
+
+        #box2 {
+            flex: 50%;
+        }
+
+        #box1 h1 {
+            text-transform: uppercase;
+            margin: 30px 0;
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="main-container">
+        <div id="box1">
+            <div>
+                <h1>result</h1>
+                <h3>{{ response.result }}</h3>
+            </div>
+        </div>
+        <div id="box2">
+            <img src="../static/img/result.png">
+        </div>
+    </div>
+</body>
+</html>
